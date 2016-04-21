@@ -16,6 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ListJson"/>
+        <activity android:name=".TJson"/>
     </application>
 
 </manifest>

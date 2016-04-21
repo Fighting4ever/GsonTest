@@ -64,6 +64,7 @@
         android:layout_alignParentTop="true"/>
 
     <Button
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="tojson"
@@ -72,6 +73,7 @@
         android:layout_alignParentStart="true" />
 
     <Button
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="fromjson"
@@ -80,6 +82,7 @@
         android:layout_alignParentEnd="true" />
 
     <Button
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ListJson"
@@ -88,11 +91,21 @@
         android:layout_toEndOf="@+id/to_json" />
 
     <Button
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="add"
         android:id="@+id/add_user"
         android:layout_alignBottom="@+id/from_json"
         android:layout_toEndOf="@+id/list_json" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TJson"
+        android:id="@+id/tjson"
+        android:layout_below="@+id/to_json"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

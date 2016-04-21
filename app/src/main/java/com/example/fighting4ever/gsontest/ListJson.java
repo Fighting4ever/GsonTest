@@ -11,7 +11,6 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -59,6 +58,7 @@ public class ListJson extends AppCompatActivity {
             }
             String bs = builder.toString();
             String jsonString = "[" + bs.substring(0, bs.length()-1) + "]";
+            Log.v("lijianqi", jsonString);
             Gson gson = new Gson();
             Type type = new TypeToken<List<User>>(){}.getType();
             users = gson.fromJson(jsonString, type);

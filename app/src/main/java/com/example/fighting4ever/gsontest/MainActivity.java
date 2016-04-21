@@ -1,17 +1,15 @@
 package com.example.fighting4ever.gsontest;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.google.gson.Gson;
 
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -30,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     Button listJson;
     @Bind(R.id.add_user)
     Button addUser;
+    @Bind(R.id.tjson)
+    Button tJson;
     @Bind(R.id.json_to_object)
     EditText jsonToObject;
     @Bind(R.id.user_name)
@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         fromJson.setOnClickListener(this);
         listJson.setOnClickListener(this);
         addUser.setOnClickListener(this);
+        tJson.setOnClickListener(this);
     }
 
     @Override
@@ -81,6 +82,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 user.setPhonenumber(phoneNumber.getText().toString());
                 user.setEmail(email.getText().toString());
                 saveUserData(user);
+                break;
+            case R.id.tjson:
+                Intent TIntent = new Intent(MainActivity.this, TJson.class);
+                startActivity(TIntent);
                 break;
             default:
                 break;
