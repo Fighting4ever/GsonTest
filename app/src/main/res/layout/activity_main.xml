@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.fighting4ever.gsontest.MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/user_name"
+        android:layout_below="@+id/json_to_object"
+        android:layout_alignEnd="@+id/from_json" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/phone_number"
+        android:layout_below="@+id/user_name"
+        android:layout_alignStart="@+id/user_name" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/email"
+        android:layout_below="@+id/phone_number"
+        android:layout_alignStart="@+id/phone_number" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/user_name_text"
+        android:layout_above="@+id/phone_number"
+        android:layout_alignParentStart="true"
+        android:text="UserName:" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone_num_text"
+        android:layout_above="@+id/email"
+        android:layout_alignParentStart="true"
+        android:text="Phone:" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/email_text"
+        android:layout_below="@+id/phone_number"
+        android:layout_alignParentStart="true"
+        android:text="Email:" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/json_to_object"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tojson"
+        android:id="@+id/to_json"
+        android:layout_below="@+id/email_text"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fromjson"
+        android:id="@+id/from_json"
+        android:layout_below="@+id/email"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ListJson"
+        android:id="@+id/list_json"
+        android:layout_below="@+id/email"
+        android:layout_toEndOf="@+id/to_json" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add"
+        android:id="@+id/add_user"
+        android:layout_alignBottom="@+id/from_json"
+        android:layout_toEndOf="@+id/list_json" />
+
+</RelativeLayout>
