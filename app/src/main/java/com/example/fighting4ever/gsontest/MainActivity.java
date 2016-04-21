@@ -17,19 +17,10 @@ import java.io.OutputStreamWriter;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @Bind(R.id.to_json)
-    Button toJson;
-    @Bind(R.id.from_json)
-    Button fromJson;
-    @Bind(R.id.list_json)
-    Button listJson;
-    @Bind(R.id.add_user)
-    Button addUser;
-    @Bind(R.id.tjson)
-    Button tJson;
     @Bind(R.id.json_to_object)
     EditText jsonToObject;
     @Bind(R.id.user_name)
@@ -43,13 +34,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        toJson.setOnClickListener(this);
-        fromJson.setOnClickListener(this);
-        listJson.setOnClickListener(this);
-        addUser.setOnClickListener(this);
-        tJson.setOnClickListener(this);
     }
 
+    @OnClick({R.id.from_json,R.id.to_json,R.id.list_json,R.id.add_user,R.id.tjson})
     @Override
     public void onClick(View v) {
         switch (v.getId()){
